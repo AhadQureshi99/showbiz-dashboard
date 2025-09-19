@@ -11,7 +11,7 @@ Modal.setAppElement("#root");
 const fallbackImage =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjRTdFN0U3Ii8+CjxwYXRoIGQ9Ik01MCAzN0M1NS41MjI5IDM3IDYwIDMyLjUyMjkgNjAgMjdDMjAuNjY2NyAyNyA0MCAyNyA0MCAyN0M0MCAzMi41MjI5IDQ0LjQ3NzEgMzcgNTAgMzdabTMwIDE4YzAgOC44MjcxIC03LjE3MjkgMTYgLTE2IDE2SDMyQzIzLjE3MjkgNzMgMTYgNjUuODIyOSAxNiA1N0MyMCA1NyA0MCA1NyA0MCA1N0M0MCA2Mi41MjI5IDQ0LjQ3NzEgNjcgNTAgNjdDNjAuNDc3MSA2NyA4MCA1NyA4MCA1N1oiIGZpbGw9IiM5QjlCOWIiLz4KPC9zdmc+";
 
-const API_BASE_URL = "http://168.231.76.184:3000";
+const API_BASE_URL = "https://shobiz.xyz";
 
 const HirerRequestScreen = ({ searchQuery = "" }) => {
   const [hirers, setHirers] = useState([]);
@@ -56,7 +56,7 @@ const HirerRequestScreen = ({ searchQuery = "" }) => {
 
         // Fetch all talents
         const talentResponse = await axios.get(
-          `${API_BASE_URL}/api/talents/all-talents`
+          `${API_BASE_URL}/api/talents/public-talents`
         );
         setTalents(talentResponse.data.talents || []);
         setFilteredTalents(talentResponse.data.talents || []);
